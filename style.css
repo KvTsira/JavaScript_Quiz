@@ -22,6 +22,7 @@ h2{
 }
 
 .container{
+    /*span the view's entire width and hight */
     width: 100vw;
     height: 100vw;
     display: flex;
@@ -64,6 +65,7 @@ h2{
     text-decoration: none;
     background: #FC766AFF;
     border-radius: 25%;
+    color: indigo;
 }
 
 .btn:hover {

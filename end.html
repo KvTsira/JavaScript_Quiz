@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>End Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div id="end" class="flex-center flex-column">
-            <h1 id="finalscore">0</h1>            
+            <h1 id="finalScore">0</h1>            
             <form class="end-form-container">
-                <H2 id="end-text">Enter your name below to save your score</H2>
+                <H2 id="end-text">Enter your name to save your score</H2>
                 <input type="text" name="name" id="username" placeholder="Enter your name"></input>
-                <button class="btn" id="saveScoreBtn" type="submit" 
-                onclick="savingResults(event)" disabled>Save</button>
+                <button class="btn" id="saveResultBtn" type="submit" 
+                onclick="savingResults(event)">Save</button>
             </form>
             <a href="/quiz.html" class="btn">Play Again</a>
             <a href="/" class="btn">Go Home</a>
         </div>
     </div>
-    <script scr="end.js"></script>
+    <script src="end.js"></script>
 </body>
 </html>
 
