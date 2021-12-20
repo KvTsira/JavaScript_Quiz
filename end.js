@@ -25,13 +25,11 @@ savingResults = e => {
     //add a current score to results
     results.push(score)
 
+    //sort the results and display top 5
     results.sort((a,b) => {
         return b.score - a.score
     })
-
-    //at position 5 remove items
     results.splice(5);
-    console.log(results);
 
     //save to local storage
     localStorage.setItem("results", JSON.stringify(results))

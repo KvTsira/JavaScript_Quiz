@@ -2,12 +2,17 @@ const question=document.querySelector('#question');
 const choices=Array.from(document.querySelectorAll('.choice-text'));
 const scoreText=document.querySelector('#score');
 
+var quizTimer = document.getElementById("timer");
 
-let currentQuestion = {}
-let correctAnswers = true
-let score = 0
-let questionCounter = 0
-let remainingQuestions= []
+
+var currentQuestion = {}
+var correctAnswers = true
+var score = 0
+var questionCounter = 0
+var remainingQuestions= []
+
+var timeLeft = 60;
+var timerInterval;
 
 //quiz question object
 var questions = [
@@ -56,7 +61,23 @@ var questions = [
 const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
+
 startQuiz = function() {
+
+    //timer
+    timerInterval = setInterval(function(){
+        //decrement the time
+        timeLeft--;
+        quizTimer.textContent="Time left: " + timeLeft;
+
+        //check if time runs out
+        if(timeLeft === 0) {
+            clearInterval(timerInterval);
+            localStorage.setItem('mostRecentScore', score)
+            return window.location.assign('./end.html');
+        }
+    }, 1000)
+
     questionCounter = 0;
     score = 0;
     remainingQuestions = [...questions];
@@ -66,7 +87,6 @@ startQuiz = function() {
 getNewQuestion = function() {
     if(remainingQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
-
         return window.location.assign('./end.html');
     }
 

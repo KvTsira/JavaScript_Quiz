@@ -19,12 +19,12 @@ h1{
 h2{
     font-size:  medium;
     margin-bottom: 4rem;
+    color: salmon;
 }
 
 .container{
-    /*span the view's entire width and hight */
+    /*span the view's entire width*/
     width: 100vw;
-    /*height: 100vw;*/
     display: flex;
     justify-content: center;
     align-items: center;
