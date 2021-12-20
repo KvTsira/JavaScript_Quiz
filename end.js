@@ -8,20 +8,21 @@ const results = JSON.parse(localStorage.getItem('results')) || []
 const MAX_HIGH_SCORES = 5
 
 finalScore.innerText = mostRecentScore;
- /*
-username.addEventListener('keyup', () => {
-    saveResultBtn.Disabled= username.value === ""
-})
-*/
 
+//save the quiz results
 savingResults = e => {
     e.preventDefault()
-
+    //validate the username input. if blank exit
+    if(username.value.length == 0) {   
+        alert("Please enter your name")
+        return; //stop the execution of function
+    }
     const score = {
         score: mostRecentScore,
         name: username.value
     }
 
+    //add a current score to results
     results.push(score)
 
     results.sort((a,b) => {
@@ -35,6 +36,4 @@ savingResults = e => {
     //save to local storage
     localStorage.setItem("results", JSON.stringify(results))
 
-    //load a new document (homepage)
-    window.location.assign('/')
 }
