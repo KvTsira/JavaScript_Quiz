@@ -1,0 +1,122 @@
+:root {
+    background-color: rgb(49, 39, 39);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: large;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+h2{
+    font-size:  medium;
+    margin-bottom: 4rem;
+}
+
+.container{
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align:  center;
+}
+
+.hidden {
+    display:  none;
+}
+
+
+.btn {
+    font-size: 35px;
+    padding: 2rem 0;
+    width: 20rem;
+    text-align:  center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    background: #FC766AFF;
+    border-radius: 25%;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+    /*transition: transform 150ms;*/
+    transform: scale(1.02)
+}
+
+#results-btn {
+    background: #5B84B1FF;
+}
+
+#results-btn:hover {
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+}
+
+
+/* End page CSS */
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);   
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+    color: #fff;
+    text-align:  center;
+}
+
+#saveResultBtn {
+    border: none;
+}
+
